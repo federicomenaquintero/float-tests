@@ -1,0 +1,9 @@
+[package]
+name = "float-tests"
+version = "0.1.0"
+authors = ["Federico Mena Quintero <federico@gnome.org>"]
+
+[dependencies.cssparser]
+git = "https://github.com/federicomenaquintero/rust-cssparser"
+#git = "https://github.com/servo/rust-cssparser"
+version = "0.14.0"
