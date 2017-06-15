@@ -24,14 +24,14 @@ fn main () {
 
     print_f64 ("f64::from_str", my_double);
     
-    let mut input = ParserInput::new ("0.67");
+    let mut input = ParserInput::new ("0.67%");
     let mut parser = Parser::new (&mut input);
 
     let token = parser.next ().unwrap ();
     match token {
-        Token::Number (ref nv) => {
+        Token::Percentage (ref pv) => {
             println! ("Token.to_css_string() = \"{}\"", token.to_css_string ());
-            print_f32 ("Token::Number(NumericValue.value)", nv.value);
+            print_f32 ("Token::Percentage(PercentageValue.value)", pv.unit_value);
         }
 
         _ => {
